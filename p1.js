@@ -182,14 +182,14 @@ function onTimesUp() {
     document.querySelector("#GameOver1").style.display = "block"
     document.getElementById("reason").innerHTML = "Time is up !"
     document.getElementById("your_score").innerHTML = `Your score is ${counter}`;
-    document.getElementById("highest_score").innerHTML = "High Score";
+    document.getElementById("highest_score").innerHTML = "New High Score";
   }
   else{
     document.querySelector("#overlay").style.display = "block";
     document.querySelector("#GameOver1").style.display = "block"
     document.getElementById("reason").innerHTML = "Time is up !"
     document.getElementById("your_score").innerHTML = `Your score is ${counter}`;
-    document.getElementById("highest_score").innerHTML = `Higest score is ${storePoints(counter)}`;
+    document.getElementById("highest_score").innerHTML = `High score is ${storePoints(counter)}`;
    
   }
   
@@ -313,7 +313,7 @@ button.addEventListener("click", function() {
               document.querySelector("#GameOver1").style.display = "block"
               document.getElementById("reason").innerHTML = "No such word!"
               document.getElementById("your_score").innerHTML = `Your score is ${counter}`;
-              document.getElementById("highest_score").innerHTML = `Higest score is ${storePoints(counter)}`;
+              document.getElementById("highest_score").innerHTML = `High score is ${storePoints(counter)}`;
             
             }
           
@@ -356,7 +356,7 @@ button.addEventListener("click", function() {
               document.querySelector("#GameOver1").style.display = "block"
               document.getElementById("reason").innerHTML = "Word has already been entered !"
               document.getElementById("your_score").innerHTML = `Your score is ${counter}`;
-              document.getElementById("highest_score").innerHTML = `Higest score is ${storePoints(counter)}`;
+              document.getElementById("highest_score").innerHTML = `High score is ${storePoints(counter)}`;
             
             }
           
