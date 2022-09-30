@@ -367,5 +367,5 @@ button.addEventListener("click", function() {
             
         })
         
-        },300)
+        },400)
     });
