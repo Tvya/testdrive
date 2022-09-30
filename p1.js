@@ -331,7 +331,7 @@ button.addEventListener("click", function() {
             if(isWordEnteredBefore(wordCreate) === false){
               wordStorage.push(wordCreate)
               console.log(wordStorage)
-              console.log("No exist & word valid")
+              console.log("Word doesn't exist & word valid")
               
               counter++;
               points.innerText = counter;
@@ -375,5 +375,5 @@ button.addEventListener("click", function() {
             
         })
         
-        },500)
+        },300)
     });
