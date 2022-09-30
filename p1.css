@@ -1,0 +1,421 @@
+body{
+    background-color: #f3f3c8
+    }
+
+#gameTitle {
+    position: absolute;
+    top: -7%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 5px solid rgba(20, 20, 20, 0.4); */
+
+}
+h1{
+    font-family:'Rubik Dirt', cursive;
+    font-size:100px;
+}
+
+#numContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: 12%;
+    margin-right: auto;
+    margin-top: 12%;
+    margin-bottom: auto;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    /* border: 5px solid rgba(20, 20, 20, 0.4); */
+   
+}
+
+#numContainer p{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+}
+
+#displayNum {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+
+#timeContainer {
+    position: absolute;
+    top: -3%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12%;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    /* border: 5px solid rgba(20, 20, 20, 0.4); */
+    
+}
+
+#pointContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: 12%;
+    margin-top: 12%;
+    margin-bottom: auto;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    /* border: 5px solid rgba(20, 20, 20, 0.4); */   
+}
+
+#pointContainer p {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+}
+
+#displayPoint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+#wordContainer{
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 5px solid rgba(20, 20, 20, 0.4); */
+    
+    
+}
+
+.letterContainer {
+    background-color: white;
+    width: 80px ;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    margin-right: 40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    text-align:center;
+    border: 1px rgba(20, 20, 20, 0.4);
+    box-shadow: 1px 2px 3px 4px rgba(20, 20, 20, 0.4);
+    
+}
+#buttonContainer {
+    position: absolute;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40%;
+    margin-bottom: auto;
+    width: max-content;
+    height: max-content;
+    /* border: 5px solid rgba(20, 20, 20, 0.4); */
+    
+
+}
+
+#Button{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 4px rgba(130, 126, 126, 0.4);
+    
+}
+
+button:disabled {
+    cursor: not-allowed; 
+    opacity: 0.65;
+}
+
+
+ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(64, 69, 50);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+
+.base-timer {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.base-timer__svg {
+    transform: scaleX(-1);
+}
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 10px;
+    stroke: grey;
+}
+
+.base-timer__path-remaining {
+    stroke-width: 10px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+
+}
+
+.base-timer__path-remaining.green {
+    color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+    color: orange;
+}
+
+.base-timer__path-remaining.red {
+    color: red;
+}
+
+.base-timer__label {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+
+/*popup*/
+
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+}
+
+.popup{
+    background-color: transparent;
+    opacity: 2;
+    width: 65%;
+    height: 85%;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    border: solid rgba(130, 126, 126, 0.5);
+    box-shadow: 2px 3px 3px 4px rgba(17, 17, 17, 0.5);
+}
+
+.popup button{
+    background-color: rgb(9, 156, 254);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 4px rgba(130, 126, 126, 0.4);
+    display: block;
+    bottom:50%;
+    margin: auto;
+    font-size: 20px;
+    color:#c5c5c5;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.popup h3{
+    font-family: 'Special Elite', cursive;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: 10px 10px;
+}
+
+.popup h4 {
+    font-family: 'Special Elite', cursive;
+    color: rgb(193, 243, 179);
+    font-size:30px;
+    text-align: center;
+    margin: 10px 10px;
+    font-weight: bold;
+
+}
+
+.popup h5 {
+    font-family: 'Special Elite', cursive;
+    color: rgb(216, 199, 18);
+    font-size: 25px;
+    text-align: center;
+    margin: 10px 10px;
+    font-weight: bold;
+
+}
+
+
+.popup p{
+    font-family: 'Chakra Petch', sans-serif;
+    color: white;
+    font-size: 16px;
+    text-align: justify;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+a{
+    display:block;
+    width: 150px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    background-color: #0f72e5;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+#round{
+    font-size: 18px;
+    font-family: 'Secular One', sans-serif;
+    color: rgb(241, 113, 53)
+}
+
+#example{
+    color: rgb(212, 198, 14)
+}
+
+#example1 {
+    color: rgb(198, 62, 194);
+    display: block;
+    text-align: center
+}
+
+#GameOver1{
+    background-color: transparent;
+    opacity: 2;
+    width: 65%;
+    height: 85%;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    border: solid rgba(130, 126, 126, 0.5);
+    box-shadow: 2px 3px 3px 4px rgba(17, 17, 17, 0.5);
+    display:none
+    
+}
+#GameOver1 h3 {
+    font-family: 'Special Elite', cursive;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: 10px 10px;
+}
+
+#GameOver1 button {
+    background-color: rgb(9, 156, 254);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 4px rgba(130, 126, 126, 0.4);
+    display: block;
+    bottom: 50%;
+    margin: auto;
+    font-size: 20px;
+    color: #c5c5c5;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+   
+}
+
+#GameOver1 p {
+    font-family: 'Special Elite', cursive;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    margin: 10px 10px;
+}
+
+.lastpage{
+  height: 100px;
+}
+
+#score{
+    height: 100px;
+}

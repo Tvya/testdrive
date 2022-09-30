@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Rubik+Dirt&family=Secular+One&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="p1.css">
+</head>
+
+<body>
+
+    <div id="gameTitle">
+        <h1>WORD GAME</h1>
+    </div>
+
+    <div id="numContainer">
+        <p>Length Of Word</p>
+        <img src="https://pixabay.com/get/g5bfcd540f04e2034d485af6d01946343f6fd78de99a7f13c0cbefee01737d043a20882e549549600871040e7546de15351593b8a67cdb09ed53058a6666a2a8c3d52b64c16b920eaeb6623bc0a50b656_1280.png"
+            alt="Sticky note1" id="stickyNote1" width="200" height="200">
+        <div id="displayNum"></div>
+    </div>
+
+    <div id="timeContainer">
+        <div id="timer"></div>
+    </div>
+
+    <div id="pointContainer">
+        <p>Score</p>
+        <img src="https://pixabay.com/get/g5bfcd540f04e2034d485af6d01946343f6fd78de99a7f13c0cbefee01737d043a20882e549549600871040e7546de15351593b8a67cdb09ed53058a6666a2a8c3d52b64c16b920eaeb6623bc0a50b656_1280.png"
+            alt="Sticky note2" id="stickyNote2" width="200" height="200">
+        <div id="displayPoint">0</div>
+    </div>
+
+
+    <div id ="wordContainer">
+        <div id="displayLetter" class="letterContainer"></div>   
+    </div> 
+
+
+
+    <div id="buttonContainer">
+        <button type="button" id="Button" disabled="disabled" >Submit</button>
+    </div>
+
+<div id="overlay">
+    <div class="popup">
+        <h3>Word Game</h3>
+        <h4>How to Play</h4>
+        <p><span id="round">In the 1st Round:</span>
+            <br><br>A random letter <span id="example">【Ｒ】</span> and number 3️⃣ will be displayed. 
+            <br><br>Player enters a word that is the length of the random number 3️⃣ that starts with the random letter <span id="example">【Ｒ】</span>
+            <br> <span id="example1" >R̲ A̲ T̲</span>
+
+            <br><span id="round">In the Subsequent rounds:</span>
+            <br><br> The last letter of the previous word entered will be the starting letter for the next round <span id="example">【Ｔ】</span>. And a random number will be generated 5️⃣. 
+            <br> <span id="example1">T̲ E̲ E̲ T̲ H̲</span>
+            <br>Player enters a word that meets the requirement to move on to the next round.
+            <br>
+        </p>
+        <h4>Rules</h4>
+        <p> 1. Player has to enter a word within 20s of each round, else, Game is Over
+        <br><br> 2. If the word entered is invalid , the Game is Over
+        <br><br> 3. Within a game session , if player enters a word that was previously entered , Game is Over  
+        </p>
+         <h5>Beat the Highest score!</h5>
+        <br>
+        <button id="close">Lets Play!</button>
+
+    </div>
+
+    <div id="GameOver1">
+        <h3>GAME OVER</h3><br><br>
+            <div id="row1" class="lastpage">
+            <p id ="reason"></p>
+            </div>
+            <div id="row2" class="lastpage">
+            <p id="your_score"></p>
+            </div>
+            <div id="row3" class="lastpage">
+            <p id="highest_score"></p>
+            </div>
+            <div id="row4" class="lastpage">
+            <button id="close1" onClick="window.location.href=window.location.href">Play Again!</button>
+            </div>
+    </div>
+
+</div>
+    
+
+    <script src="p1.js"> </script>
+
+</body>
+
+</html>
+
