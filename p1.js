@@ -115,17 +115,8 @@ async function isWordValid(word){
 //Return the highestscore
 function storePoints(score){
         localStorage.setItem(Date(), score)
-
-        let points = [],
-                keys = Object.keys(localStorage),
-                i = keys.length;
-
-            while (i--) {
-                points.push(JSON.parse(localStorage.getItem(keys[i])));
-            }
-            
-            let highestScore = Math.max.apply(0, points)
-            console.log(Object.values(localStorage))
+        let points = Object.values(localStorage)
+        let highestScore = Math.max.apply(0,points)
 
             return highestScore ;
 }
@@ -185,19 +176,20 @@ function onTimesUp() {
   
   wordStorage.length=0   
   console.log(counter)
+
   if (storePoints(counter) === counter){
     document.querySelector("#overlay").style.display = "block";
     document.querySelector("#GameOver1").style.display = "block"
     document.getElementById("reason").innerHTML = "Time is up !"
     document.getElementById("your_score").innerHTML = `Your score is ${counter}`;
-    document.getElementById("highest_score").innerHTML = "New High Score";
+    document.getElementById("highest_score").innerHTML = "High Score";
   }
   else{
     document.querySelector("#overlay").style.display = "block";
     document.querySelector("#GameOver1").style.display = "block"
     document.getElementById("reason").innerHTML = "Time is up !"
     document.getElementById("your_score").innerHTML = `Your score is ${counter}`;
-    document.getElementById("highest_score").innerHTML = `The  Higest score is ${storePoints(counter)}`;
+    document.getElementById("highest_score").innerHTML = `Higest score is ${storePoints(counter)}`;
    
   }
   
@@ -312,16 +304,16 @@ button.addEventListener("click", function() {
             if (storePoints(counter) === counter){
               document.querySelector("#overlay").style.display = "block";
               document.querySelector("#GameOver1").style.display = "block"
-              document.getElementById("reason").innerHTML = "Word does not exist!"
+              document.getElementById("reason").innerHTML = "No such word!"
               document.getElementById("your_score").innerHTML = `Your score is ${counter}`;
               document.getElementById("highest_score").innerHTML = "New High Score";
             }
             else{
               document.querySelector("#overlay").style.display = "block";
               document.querySelector("#GameOver1").style.display = "block"
-              document.getElementById("reason").innerHTML = "Word does not exist !"
+              document.getElementById("reason").innerHTML = "No such word!"
               document.getElementById("your_score").innerHTML = `Your score is ${counter}`;
-              document.getElementById("highest_score").innerHTML = `The  Higest score is ${storePoints(counter)}`;
+              document.getElementById("highest_score").innerHTML = `Higest score is ${storePoints(counter)}`;
             
             }
           
@@ -331,7 +323,7 @@ button.addEventListener("click", function() {
             if(isWordEnteredBefore(wordCreate) === false){
               wordStorage.push(wordCreate)
               console.log(wordStorage)
-              console.log("Word doesn't exist & word valid")
+              console.log("Word doesn't exist & word is valid")
               
               counter++;
               points.innerText = counter;
@@ -364,7 +356,7 @@ button.addEventListener("click", function() {
               document.querySelector("#GameOver1").style.display = "block"
               document.getElementById("reason").innerHTML = "Word has already been entered !"
               document.getElementById("your_score").innerHTML = `Your score is ${counter}`;
-              document.getElementById("highest_score").innerHTML = `The  Higest score is ${storePoints(counter)}`;
+              document.getElementById("highest_score").innerHTML = `Higest score is ${storePoints(counter)}`;
             
             }
           
