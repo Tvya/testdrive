@@ -1,5 +1,6 @@
 Its a game that was inspired off from the concept/idea of 'Antakshari'(Is a spoken parlor game played in India)
-How to Play
+
+<p><span>How to Play</span>
         <p><span id="round">In the 1st Round:</span>
             <br><br>A random letter <span id="example">【Ｒ】</span> and number 3️⃣ will be displayed. 
             <br><br>Player enters a word that is the length of the random number 3️⃣ that starts with the random letter <span id="example">【Ｒ】</span>
