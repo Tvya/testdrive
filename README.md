@@ -5,8 +5,7 @@ Its a game that was inspired off from the concept/idea of 'Antakshari'(Is a spok
             <br><br>A random letter <span id="example">【Ｒ】</span> and number 3️⃣ will be displayed. 
             <br><br>Player enters a word that is the length of the random number 3️⃣ that starts with the random letter <span id="example">【Ｒ】</span>
             <br> <span id="example1" >R̲ A̲ T̲</span>
-
-            <br><span id="round">In the Subsequent rounds:</span>
+            <p><span id="round">In the Subsequent rounds:</span>
             <br><br> The last letter of the previous word entered will be the starting letter for the next round <span id="example">【Ｔ】</span>. And a random number will be generated 5️⃣. 
             <br> <span id="example1">T̲ E̲ E̲ T̲ H̲</span>
             <br>Player enters a word that meets the requirement to move on to the next round.
