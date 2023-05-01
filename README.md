@@ -17,3 +17,5 @@ Its a game that was inspired off from the concept/idea of 'Antakshari'(Is a spok
         <br><br> 3. Within a game session , if player enters a word that was previously entered , Game is Over  
         </p>
          <h5>Beat the Highest score!</h5>
+
+
