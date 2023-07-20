@@ -1,5 +1,5 @@
 Its a game that was inspired off from the concept/idea of 'Antakshari'(Is a spoken parlor game played in India)
-
+Game Page : https://tvya.github.io/wordgame/
 <p><span>How to Play:</span>
         <p><span id="round">In the 1st Round:</span>
             <br>- A random letter <span id="example">【Ｒ】</span> and number 3️⃣ will be displayed. 
